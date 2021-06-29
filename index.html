@@ -1,0 +1,1566 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="apple-mobile-web-app-title" content="CodePen">
+  <title>Ibrohim_uz Portfolio</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
+
+
+  <style>
+    @import url(https://fonts.googleapis.com/css?family=PT+Sans);
+
+    *,
+    *:before,
+    *:after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      transition: all 0.5s;
+    }
+
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+    }
+
+    body {
+      color: #444;
+      background: #f9f9f9;
+      font-size: 16px;
+      font-family: "PT Sans", sans-serif;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    section {
+      position: relative;
+      width: 100%;
+    }
+
+    /*##### HERO SECTION #####*/
+    .hero {
+      height: 100%;
+      background: url("https://source.unsplash.com/a2NRu2Wxa2o/");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero .content {
+      background: rgba(0, 0, 0, 0.5);
+      width: 100%;
+      height: 100%;
+    }
+
+    .hero .content .header {
+      position: absolute;
+      top: 55%;
+      width: 100%;
+      -webkit-transform: translate(0%, -50%);
+      transform: translate(0%, -50%);
+      text-align: center;
+      opacity: 0;
+    }
+
+    .hero .content .header h1 {
+      color: #fff;
+      font-size: 2.5em;
+      text-shadow: 0px 2px 3px #2d2d2d;
+    }
+
+    /*##### ABOUT MYSELF SECTION #####*/
+    .about-myself {
+      padding: 50px 20px;
+    }
+
+    .about-myself .content {
+      text-align: center;
+    }
+
+    .about-myself .content h2 {
+      color: #3d3d3d;
+      font-size: 3em;
+      margin-bottom: 20px;
+      -webkit-transform: translateY(-50px) scale(0);
+      transform: translateY(-50px) scale(0);
+      -webkit-transition: transform 0.7s;
+      -moz-transition: transform 0.7s;
+      transition: transform 0.7s;
+    }
+
+    .about-myself .content .aboutTitleVisible {
+      -webkit-transform: translateY(0px) scale(1);
+      transform: translateX(0px) scale(1);
+    }
+
+    .about-myself .content p span {
+      color: #c0392b;
+      font-weight: bold;
+    }
+
+    /*##### EXPERIENCE SECTION #####*/
+    .experience {
+      background: #002440;
+      padding: 50px 0;
+      overflow-x: hidden;
+    }
+
+    .experience .content {
+      text-align: center;
+    }
+
+    .experience .content h1 {
+      font-size: 2em;
+      color: #fff;
+    }
+
+    .experience .content ul {
+      padding: 50px 0;
+      list-style-type: none;
+    }
+
+    .experience .content ul li {
+      background: #f5f5f5;
+      position: relative;
+      margin-left: 20px;
+      width: 5px;
+      padding-bottom: 40px;
+    }
+
+    .experience .content ul li:last-child {
+      padding-bottom: 7px;
+    }
+
+    .experience .content ul li:before {
+      content: "";
+      background: #002440;
+      position: absolute;
+      left: 50%;
+      top: 0;
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%);
+      width: 20px;
+      height: 20px;
+      border: 4px solid #f5f5f5;
+    }
+
+    .experience .content ul li .hidden {
+      opacity: 0;
+      margin-left: 10vw;
+    }
+
+    .experience .content ul li .experience-content {
+      background: #f5f5f5;
+      position: relative;
+      top: 7px;
+      left: 48px;
+      width: calc(100vw - 100px);
+      padding: 20px;
+      text-align: center;
+      -webkit-border-radius: 0 5px 5px;
+      -moz-border-radius: 0 5px 5px;
+      border-radius: 0 5px 5px;
+    }
+
+    .experience .content ul li .experience-content h2 {
+      font-size: 1.5em;
+      color: #3c3c3c;
+      padding-bottom: 10px;
+    }
+
+    .experience .content ul li .experience-content .experience-time {
+      color: #777;
+      font-size: 1.1em;
+      padding-bottom: 10px;
+    }
+
+    .experience .content ul li .experience-content p {
+      color: #1a1a1a;
+      font-size: 0.95em;
+    }
+
+    .experience .content ul li .experience-content:before {
+      content: "";
+      background: #f5f5f5;
+      position: absolute;
+      top: 0;
+      left: -35px;
+      width: 35px;
+      height: 5px;
+    }
+
+    /*##### SKILLS SECTION #####*/
+    .skills {
+      padding: 70px 20px;
+    }
+
+    .skills .content .development-wrapper .development-title {
+      color: #3c3c3c;
+      font-size: 2em;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .skills .content .development-wrapper .skills-bar-container {
+      position: relative;
+      width: 100%;
+      list-style-type: none;
+    }
+
+    .skills .content .development-wrapper .skills-bar-container li {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    .skills .content .development-wrapper .skills-bar-container li .progressbar-title {
+      color: #3c3c3c;
+      margin-bottom: 5px;
+    }
+
+    .skills .content .development-wrapper .skills-bar-container li .progressbar-title h3 {
+      display: inline-block;
+    }
+
+    .skills .content .development-wrapper .skills-bar-container li .progressbar-title .percent {
+      position: absolute;
+      right: 20px;
+      font-size: 1.1em;
+    }
+
+    .skills .content .development-wrapper .skills-bar-container li .bar-container {
+      background: #ececec;
+      position: relative;
+      width: 100%;
+      height: 10px;
+    }
+
+    .skills .content .development-wrapper .skills-bar-container li .bar-container .progressbar {
+      background: #34495e;
+      position: absolute;
+      width: 0%;
+      height: 100%;
+    }
+
+    .skills .content .tools-knowledge-wrapper {
+      width: 100%;
+    }
+
+    .skills .content .tools-knowledge-wrapper .tools-wrapper,
+    .skills .content .tools-knowledge-wrapper .knowledge-wrapper {
+      position: relative;
+      padding: 20px 0;
+      width: 100%;
+      text-align: center;
+    }
+
+    .skills .content .tools-knowledge-wrapper .tools-wrapper .title,
+    .skills .content .tools-knowledge-wrapper .knowledge-wrapper .title {
+      color: #3c3c3c;
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+
+    .skills .content .tools-knowledge-wrapper .tools-wrapper ul,
+    .skills .content .tools-knowledge-wrapper .knowledge-wrapper ul {
+      list-style-type: none;
+      margin-left: 40px;
+    }
+
+    .skills .content .tools-knowledge-wrapper .tools-wrapper ul li,
+    .skills .content .tools-knowledge-wrapper .knowledge-wrapper ul li {
+      color: #444;
+      font-weight: bold;
+      font-size: 1.1em;
+      text-align: left;
+    }
+
+    .skills .content .tools-knowledge-wrapper .tools-wrapper ul li i,
+    .skills .content .tools-knowledge-wrapper .knowledge-wrapper ul li i {
+      color: #27ae60;
+    }
+
+    /*##### RESUME SECTION #####*/
+    .resume {
+      background: url("https://source.unsplash.com/L8126OwlroY/");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .resume .content {
+      background: rgba(0, 0, 0, 0.3);
+      padding: 50px 0;
+      text-align: center;
+    }
+
+    .resume .content a {
+      color: #fff;
+      text-transform: uppercase;
+    }
+
+    .resume .content a .btn-resume {
+      display: inline-block;
+      font-size: 1.1em;
+      padding: 20px;
+      margin: 0 15px;
+      background: rgba(255, 255, 255, 0.2);
+      position: relative;
+      border: 2px solid #fff;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+
+    .resume .content a .btn-resume span {
+      -webkit-transition: opacity 1.2s;
+      -moz-transition: opacity 1.2s;
+      transition: opacity 1.2s;
+    }
+
+    .resume .content a .btn-resume i {
+      color: #fff;
+      position: absolute;
+      padding: 20px 0;
+      top: -80px;
+      width: 100%;
+      left: 0;
+      -webkit-transition: top 0.5s;
+      -moz-transition: top 0.5s;
+      transition: top 0.5s;
+    }
+
+    .resume .content a .btn-resume:hover span {
+      opacity: 0;
+      -webkit-transition: opacity 0.4s;
+      -moz-transition: opacity 0.4s;
+      transition: opacity 0.4s;
+    }
+
+    .resume .content a .btn-resume:hover i {
+      top: 0;
+    }
+
+    /*##### PORTFOLIO SECTION #####*/
+    .portfolio {
+      background: #f9f9f9;
+      padding: 80px 0;
+    }
+
+    .portfolio .content {
+      text-align: center;
+    }
+
+    .portfolio .content h1 {
+      color: #3c3c3c;
+      font-size: 2em;
+      margin-bottom: 50px;
+    }
+
+    .portfolio .content .projects {
+      width: 100%;
+    }
+
+    .portfolio .content .projects .project {
+      color: #fff;
+      position: relative;
+      width: 80%;
+      margin-left: 10%;
+      margin-right: 10%;
+      margin-bottom: 10%;
+      overflow: hidden;
+    }
+
+    .portfolio .content .projects .project:last-child {
+      margin-bottom: 0;
+    }
+
+    .portfolio .content .projects .project .project-image img {
+      width: 100%;
+    }
+
+    .portfolio .content .projects .project .project-title {
+      color: #3c3c3c;
+      padding: 10px 0;
+    }
+
+    .portfolio .content .projects .project .project-description {
+      color: #444;
+    }
+
+    /*##### CONTACT SECTION #####*/
+    .contact {
+      padding: 30px 0;
+    }
+
+    .contact .socials {
+      list-style-type: none;
+      width: 100%;
+    }
+
+    .contact .socials .social {
+      width: 25%;
+      float: left;
+      text-align: center;
+    }
+
+    .contact .socials .social a {
+      color: #3d3d3d;
+      font-size: 1.5em;
+      -webkit-transition: color 0.3s;
+      -moz-transition: color 0.3s;
+      transition: color 0.3s;
+    }
+
+    .contact .socials .social .email:hover {
+      color: #c8a028;
+    }
+
+    .contact .socials .social .twitter:hover {
+      color: #57AEE7;
+    }
+
+    .contact .socials .social .linkedin:hover {
+      color: #0177B5;
+    }
+
+    .contact .socials .social .codepen:hover {
+      color: #707070;
+    }
+
+    .contact .clear {
+      clear: both;
+    }
+
+    .footer {
+      padding: 25px 0;
+      text-align: center;
+    }
+
+    .footer p {
+      color: #777;
+      font-size: 1.1em;
+    }
+
+    .footer i {
+      color: #e74c3c;
+    }
+
+    /* ############################
+        RESPONSIVE
+############################### */
+    @media screen and (min-width: 480px) {
+
+      .skills .content .tools-knowledge-wrapper .tools-wrapper,
+      .skills .content .tools-knowledge-wrapper .knowledge-wrapper {
+        width: 50%;
+        float: left;
+        padding: 0;
+      }
+
+      .skills .content .tools-knowledge-wrapper .tools-wrapper ul,
+      .skills .content .tools-knowledge-wrapper .knowledge-wrapper ul {
+        margin-left: 0;
+      }
+
+      .skills .content .clear {
+        clear: both;
+      }
+    }
+
+    @media screen and (min-width: 640px) {
+      .about-myself {
+        padding: 100px 40px;
+      }
+
+      .skills {
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      .skills .content .development-wrapper {
+        width: 600px;
+        margin: auto;
+        margin-bottom: 50px;
+      }
+
+      .skills .content .tools-knowledge-wrapper {
+        width: 600px;
+        margin: auto;
+      }
+
+      .contact .content .socials {
+        width: 600px;
+        margin: auto;
+      }
+    }
+
+    @media screen and (min-width: 960px) {
+      .experience .content ul li {
+        margin: 0 auto;
+      }
+
+      .experience .content ul li .experience-content {
+        width: 40vw;
+      }
+
+      .experience .content ul li:nth-child(odd) .experience-content {
+        left: 63px;
+      }
+
+      .experience .content ul li:nth-child(odd) .experience-content:before {
+        left: -50px;
+        width: 50px;
+      }
+
+      .experience .content ul li:nth-child(even) .experience-content {
+        left: calc(-40vw - 57px);
+        -webkit-border-radius: 5px 0px 5px 5px;
+        -moz-border-radius: 5px 0px 5px 5px;
+        border-radius: 5px 0px 5px 5px;
+      }
+
+      .experience .content ul li:nth-child(even) .experience-content:before {
+        left: auto;
+        right: -50px;
+        width: 50px;
+      }
+
+      .experience .content ul li:nth-child(odd) .hidden {
+        margin-left: 10vw;
+      }
+
+      .experience .content ul li:nth-child(even) .hidden {
+        margin-left: -10vw;
+      }
+
+      .skills {
+        padding-left: 50px;
+        padding-right: 50px;
+      }
+
+      .skills .content {
+        max-width: 1100px;
+        margin: auto;
+      }
+
+      .skills .content .development-wrapper,
+      .skills .content .tools-knowledge-wrapper {
+        float: left;
+      }
+
+      .skills .content .development-wrapper {
+        margin-bottom: 0;
+        width: 60%;
+      }
+
+      .skills .content .tools-knowledge-wrapper {
+        width: 40%;
+        margin-top: 60px;
+      }
+
+      .skills .content .tools-knowledge-wrapper .tools-wrapper,
+      .skills .content .tools-knowledge-wrapper .knowledge-wrapper {
+        float: none;
+        margin: auto;
+      }
+
+      .skills .content .tools-knowledge-wrapper .tools-wrapper {
+        margin-bottom: 30px;
+      }
+
+      .portfolio .content .projects .project {
+        position: relative;
+        margin: auto;
+        margin-bottom: 3%;
+        width: 680px;
+        height: 450px;
+        overflow: hidden;
+      }
+
+      .portfolio .content .projects .project:hover .project-image {
+        -webkit-transform: scale(0.5);
+        transform: scale(0.5);
+      }
+
+      .portfolio .content .projects .project:hover .project-title,
+      .portfolio .content .projects .project:hover .project-description {
+        opacity: 1;
+      }
+
+      .portfolio .content .projects .project .project-image {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        -webkit-transition: transform 0.5s ease;
+        transition: transform 0.5s ease;
+        -webkit-transform-origin: left top;
+        transform-origin: left top;
+        z-index: 3;
+        overflow: hidden;
+      }
+
+      .portfolio .content .projects .project .project-image img {
+        width: 100%;
+        height: auto;
+        min-height: 100%;
+        min-width: 100%;
+      }
+
+      .portfolio .content .projects .project .project-title,
+      .portfolio .content .projects .project .project-description {
+        position: absolute;
+        height: 50%;
+        opacity: 0;
+        -webkit-transition: opacity 0.3s linear;
+        transition: opacity 0.3s linear;
+        overflow: hidden;
+      }
+
+      .portfolio .content .projects .project .project-title {
+        width: 50%;
+        top: 0;
+        right: 0;
+        padding: 10px;
+        text-align: center;
+        display: table;
+      }
+
+      .portfolio .content .projects .project .project-title h2 {
+        font-size: 2em;
+        text-decoration: underline;
+        display: table-cell;
+        vertical-align: middle;
+      }
+
+      .portfolio .content .projects .project .project-description {
+        width: 100%;
+        top: 50%;
+        left: 0;
+        padding: 25px 10px;
+        text-align: left;
+      }
+    }
+
+    .cont {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-image: linear-gradient(to left bottom, #F2E3C6 0%, #A7A1A5 100%);
+      overflow: hidden;
+    }
+
+    .app {
+      position: relative;
+      min-width: 850px;
+      height: 540px;
+      box-shadow: 0 0 60px rgba(0, 0, 0, 0.3);
+      overflow: hidden;
+    }
+
+    .app__bgimg {
+      position: absolute;
+      top: 0;
+      left: -2.5%;
+      width: 105%;
+      height: 100%;
+      transition: transform 3.5s 770ms;
+    }
+
+    .app__bgimg-image {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+
+    .app__bgimg-image--1 {
+      background: url("./images/neoncar.jpg") center center no-repeat;
+      background-size: cover;
+    }
+
+    .app__bgimg-image--2 {
+      background: url("./images/neoncity.jpg") center center no-repeat;
+      background-size: cover;
+      opacity: 0;
+      transition: opacity 0ms 1300ms;
+      will-change: opacity;
+    }
+
+    .app__text {
+      position: absolute;
+      right: 165px;
+      top: 150px;
+      font-family: "Roboto", sans-serif;
+      text-transform: uppercase;
+      z-index: 1;
+    }
+
+    .app__text-line {
+      transition: transform 1500ms 400ms, opacity 750ms 500ms;
+      will-change: transform, opacity;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    .app__text-line--4 {
+      transition: transform 1500ms 1500ms, opacity 1500ms 1500ms;
+    }
+
+    .app__text-line--3 {
+      transition: transform 1500ms 1600ms, opacity 1500ms 1750ms;
+    }
+
+    .app__text-line--2 {
+      transition: transform 1500ms 1700ms, opacity 1500ms 2000ms;
+    }
+
+    .app__text-line--1 {
+      transition: transform 1500ms 1800ms, opacity 1500ms 2250ms;
+    }
+
+    .app__text-line--4 {
+      font-size: 50px;
+      font-weight: 700;
+      color: #0A101D;
+    }
+
+    .app__text-line--3 {
+      font-size: 40px;
+      font-weight: 300;
+    }
+
+    .app__text-line--2 {
+      margin-top: 10px;
+      font-size: 14px;
+      font-weight: 500;
+      color: #0099CC;
+    }
+
+    .app__text-line--1 {
+      margin-top: 15px;
+    }
+
+    .app__text-line--1 img {
+      width: 50px;
+    }
+
+    .app__text--1 .app__text-line {
+      transform: translate3d(0, -125px, 0);
+      opacity: 0;
+    }
+
+    .app__text--2 {
+      right: initial;
+      top: 250px;
+      left: 80px;
+      z-index: -1;
+      transition: z-index 1500ms;
+    }
+
+    .app__text--2 .app__text-line--4 {
+      opacity: 0;
+      transition: transform 1500ms -75ms, opacity 400ms 125ms;
+    }
+
+    .app__text--2 .app__text-line--3 {
+      opacity: 0;
+      transition: transform 1500ms 0ms, opacity 400ms 200ms;
+    }
+
+    .app__text--2 .app__text-line--2 {
+      opacity: 0;
+      transition: transform 1500ms 75ms, opacity 400ms 275ms;
+    }
+
+    .app__text--2 .app__text-line--1 {
+      opacity: 0;
+      transition: transform 1500ms 150ms, opacity 400ms 350ms;
+    }
+
+    .app__img {
+      position: absolute;
+      transform: translate3d(0, -750px, 0);
+      width: 850px;
+      height: 100%;
+      transition: transform 3s cubic-bezier(0.6, 0.13, 0.31, 1.02);
+      will-change: transform;
+    }
+
+    .app__img img {
+      min-width: 100%;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    .initial .app__img {
+      transform: translate3d(0, 0, 0);
+    }
+
+    .initial .app__text--1 .app__text-line--1 {
+      transform: translate3d(0, 0, 0);
+      transition: transform 1500ms 1400ms, opacity 400ms 1600ms;
+      opacity: 1;
+    }
+
+    .initial .app__text--1 .app__text-line--2 {
+      transform: translate3d(0, 0, 0);
+      transition: transform 1500ms 1475ms, opacity 400ms 1675ms;
+      opacity: 1;
+    }
+
+    .initial .app__text--1 .app__text-line--3 {
+      transform: translate3d(0, 0, 0);
+      transition: transform 1500ms 1550ms, opacity 400ms 1750ms;
+      opacity: 1;
+    }
+
+    .initial .app__text--1 .app__text-line--4 {
+      transform: translate3d(0, 0, 0);
+      transition: transform 1500ms 1625ms, opacity 400ms 1825ms;
+      opacity: 1;
+    }
+
+    .active .app__bgimg {
+      transform: translate3d(10px, 0, 0) scale(1.05);
+      transition: transform 5s 850ms ease-in-out;
+    }
+
+    .active .app__bgimg .app__bgimg-image--2 {
+      opacity: 1;
+      transition: opacity 0ms 1500ms;
+    }
+
+    .active .app__img {
+      transition: transform 3s cubic-bezier(0.6, 0.13, 0.31, 1.02);
+      transform: translate3d(0, -1410px, 0);
+    }
+
+    .active .app__text--1 {
+      z-index: -1;
+      transition: z-index 0ms 1500ms;
+    }
+
+    .active .app__text--1 .app__text-line--1 {
+      transform: translate3d(0, -125px, 0);
+      transition: transform 1500ms 300ms, opacity 400ms 500ms;
+      opacity: 0;
+    }
+
+    .active .app__text--1 .app__text-line--2 {
+      transform: translate3d(0, -125px, 0);
+      transition: transform 1500ms 375ms, opacity 400ms 575ms;
+      opacity: 0;
+    }
+
+    .active .app__text--1 .app__text-line--3 {
+      transform: translate3d(0, -125px, 0);
+      transition: transform 1500ms 450ms, opacity 400ms 650ms;
+      opacity: 0;
+    }
+
+    .active .app__text--1 .app__text-line--4 {
+      transform: translate3d(0, -125px, 0);
+      transition: transform 1500ms 525ms, opacity 400ms 725ms;
+      opacity: 0;
+    }
+
+    .active .app__text--2 {
+      z-index: 1;
+    }
+
+    .active .app__text--2 .app__text-line--1 {
+      transform: translate3d(0, -125px, 0);
+      transition: transform 2500ms 1100ms, opacity 1300ms 1300ms;
+      opacity: 1;
+    }
+
+    .active .app__text--2 .app__text-line--2 {
+      transform: translate3d(0, -125px, 0);
+      transition: transform 2500ms 1175ms, opacity 1300ms 1575ms;
+      opacity: 1;
+    }
+
+    .active .app__text--2 .app__text-line--3 {
+      transform: translate3d(0, -125px, 0);
+      transition: transform 2500ms 1250ms, opacity 1300ms 1850ms;
+      opacity: 1;
+    }
+
+    .active .app__text--2 .app__text-line--4 {
+      transform: translate3d(0, -125px, 0);
+      transition: transform 2500ms 1325ms, opacity 1300ms 2125ms;
+      opacity: 1;
+    }
+
+    .mouse {
+      position: relative;
+      margin-right: 20px;
+      min-width: 50px;
+      height: 80px;
+      border-radius: 30px;
+      border: 5px solid rgba(255, 255, 255, 0.8);
+    }
+
+    .mouse:after {
+      content: "";
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translate(-50%, 0);
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: #fff;
+      -webkit-animation: scroll 1s infinite alternate;
+      animation: scroll 1s infinite alternate;
+    }
+
+    @-webkit-keyframes scroll {
+      100% {
+        transform: translate(-50%, 15px);
+      }
+    }
+
+    @keyframes scroll {
+      100% {
+        transform: translate(-50%, 15px);
+      }
+    }
+
+    .pages {
+      margin-left: 20px;
+    }
+
+    .pages__list {
+      list-style-type: none;
+    }
+
+    .pages__item {
+      position: relative;
+      margin-bottom: 10px;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      border: 3px solid #fff;
+      cursor: pointer;
+    }
+
+    .pages__item:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0, 0);
+      width: 75%;
+      height: 75%;
+      border-radius: 50%;
+      background-color: #fff;
+      opacity: 0;
+      transition: 500ms;
+    }
+
+    .pages__item:hover:after {
+      transform: translate(-50%, -50%) scale(1, 1);
+      opacity: 1;
+    }
+
+    .page__item-active:after {
+      transform: translate(-50%, -50%) scale(1, 1);
+      opacity: 1;
+    }
+
+    .icon-link {
+      position: absolute;
+      left: 5px;
+      bottom: 5px;
+      width: 50px;
+    }
+
+    .icon-link img {
+      width: 100%;
+      vertical-align: top;
+    }
+
+    .icon-link--twitter {
+      left: auto;
+      right: 5px;
+    }
+
+.navigation {
+  height: 70px;
+  background: #262626;
+}
+
+.brand {
+  position: absolute;
+  padding-left: 20px;
+  float: left;
+  line-height: 70px;
+  text-transform: uppercase;
+  font-size: 1.4em;
+}
+.brand a,
+.brand a:visited {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.nav-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+nav {
+  float: right;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav ul li {
+  float: left;
+  position: relative;
+}
+nav ul li a,
+nav ul li a:visited {
+  display: block;
+  padding: 0 20px;
+  line-height: 70px;
+  background: #262626;
+  color: #ffffff;
+  text-decoration: none;
+}
+nav ul li a:hover,
+nav ul li a:visited:hover {
+  background: #2581DC;
+  color: #ffffff;
+}
+nav ul li a:not(:only-child):after,
+nav ul li a:visited:not(:only-child):after {
+  padding-left: 4px;
+  content: " ▾";
+}
+nav ul li ul li {
+  min-width: 190px;
+}
+nav ul li ul li a {
+  padding: 15px;
+  line-height: 20px;
+}
+
+.nav-dropdown {
+  position: absolute;
+  display: none;
+  z-index: 1;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Mobile navigation */
+.nav-mobile {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #262626;
+  height: 70px;
+  width: 70px;
+}
+
+@media only screen and (max-width: 798px) {
+  .nav-mobile {
+    display: block;
+  }
+
+  nav {
+    width: 100%;
+    padding: 70px 0 15px;
+  }
+  nav ul {
+    display: none;
+  }
+  nav ul li {
+    float: none;
+  }
+  nav ul li a {
+    padding: 15px;
+    line-height: 20px;
+  }
+  nav ul li ul li a {
+    padding-left: 30px;
+  }
+
+  .nav-dropdown {
+    position: static;
+  }
+}
+@media screen and (min-width: 799px) {
+  .nav-list {
+    display: block !important;
+  }
+}
+#nav-toggle {
+  position: absolute;
+  left: 18px;
+  top: 22px;
+  cursor: pointer;
+  padding: 10px 35px 16px 0px;
+}
+#nav-toggle span,
+#nav-toggle span:before,
+#nav-toggle span:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 5px;
+  width: 35px;
+  background: #ffffff;
+  position: absolute;
+  display: block;
+  content: "";
+  transition: all 300ms ease-in-out;
+}
+#nav-toggle span:before {
+  top: -10px;
+}
+#nav-toggle span:after {
+  bottom: -10px;
+}
+#nav-toggle.active span {
+  background-color: transparent;
+}
+#nav-toggle.active span:before, #nav-toggle.active span:after {
+  top: 0;
+}
+#nav-toggle.active span:before {
+  transform: rotate(45deg);
+}
+#nav-toggle.active span:after {
+  transform: rotate(-45deg);
+}
+
+article {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 10px;
+}
+  </style>
+
+  <script>
+    window.console = window.console || function (t) {};
+  </script>
+
+
+
+  <script>
+    if (document.location.search.match(/type=embed/gi)) {
+      window.parent.postMessage("resize", "*");
+    }
+  </script>
+
+
+</head>
+
+<body translate="no">
+  <section class="navigation">
+    <div class="nav-container">
+      <div class="brand">
+        <a href="#!">Ibrohim_uz</a>
+      </div>
+      <nav>
+        <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
+        <ul class="nav-list">
+          <li>
+            <a href="#!">Home</a>
+          </li>
+          <li>
+            <a href="#!">About</a>
+          </li>
+          <li>
+            <a href="#">My Stats</a>
+            <ul class="nav-dropdown">
+              <li>
+                <a href="#!">Web Design</a>
+              </li>
+              <li>
+                <a href="#!">Web Development</a>
+              </li>
+              <li>
+                <a href="#!">Graphic Design</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#!">Pricing</a>
+          </li>
+          <li>
+            <a href="#!">Portfolio</a>
+            <ul class="nav-dropdown">
+              <li>
+                <a href="#!">Web Design</a>
+              </li>
+              <li>
+                <a href="#!">Web Development</a>
+              </li>
+              <li>
+                <a href="#!">Graphic Design</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#!">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </section>
+  <section class="hero">
+    <div class="content">
+      <div class="header">
+        <h1>IT PROGRAMMER <br> Ibrohim_uz</h1>
+      </div>
+    </div>
+  </section>
+  <section class="about-myself">
+    <div class="content">
+      <h2>Hi!</h2>
+      <p>My name is... <span>Ibrohim</span> I am 14 years old, I have been interested in programming for over 3 years
+        and I am currently a <span>Front-End</span> developer</p>
+    </div>
+  </section>
+  <div class="cont">
+    <div class="mouse"></div>
+    <div class="app">
+      <div class="app__bgimg">
+        <div class="app__bgimg-image app__bgimg-image--1">
+        </div>
+        <div class="app__bgimg-image app__bgimg-image--2">
+        </div>
+      </div>
+      <div class="app__img">
+        <img onmousedown="return false" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/537051/whiteTest4.png"
+          alt="city" />
+      </div>
+
+      <div class="app__text app__text--1">
+        <div class="app__text-line app__text-line--4">@Ibroxim_uz</div>
+        <div class="app__text-line app__text-line--3">IT Programmist</div>
+        <div class="app__text-line app__text-line--2">Front-End</div>
+        <div class="app__text-line app__text-line--1"><img
+            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/537051/opus-attachment.png" alt="" /></div>
+      </div>
+
+      <div class="app__text app__text--2">
+        <div class="app__text-line app__text-line--4">HTML, Pug</div>
+        <div class="app__text-line app__text-line--3">CSS, SCSS, LESS</div>
+        <div class="app__text-line app__text-line--2">JavaScript, Bootstrap</div>
+        <div class="app__text-line app__text-line--1"><img
+            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/537051/opus-attachment.png" alt="" /></div>
+      </div>
+    </div>
+    <div class="pages">
+      <ul class='pages__list'>
+        <li data-target='1' class='pages__item pages__item--1 page__item-active'></li>
+        <li data-target='2' class='pages__item pages__item--2'></li>
+      </ul>
+    </div>
+  </div>
+  <section class="experience">
+    <div class="content">
+      <h1>My Stats</h1>
+      <ul>
+        <li>
+          <div class="experience-content hidden">
+            <h2>I made 30 Web Sites</h2>
+            <div class="experience-time">2021 - March</div>
+          </div>
+        </li>
+        <li>
+          <div class="experience-content hidden">
+            <h2>I made +60 programms</h2>
+            <div class="experience-time">2021 - May</div>
+          </div>
+        </li>
+        <li>
+          <div class="experience-content hidden">
+            <h2>I learn +7 Languages</h2>
+            <div class="experience-time">2021 - June</div>
+          </div>
+        </li>
+        <li>
+          <div class="experience-content hidden">
+            <h2>I made my Language "UPL"</h2>
+            <div class="experience-time">2021 - ...</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section class="skills">
+    <div class="content">
+      <div class="development-wrapper">
+        <h2 class="development-title">Development</h2>
+        <ul class="skills-bar-container">
+          <li>
+            <div class="progressbar-title">
+              <h3>HTML5, PUG</h3>
+              <span class="percent" id="html-pourcent"></span>
+            </div>
+            <div class="bar-container" data-percent="95">
+              <span class="progressbar" id="progress-html"></span>
+            </div>
+          </li>
+          <li>
+            <div class="progressbar-title">
+              <h3>CSS / SASS / Less</h3>
+              <span class="percent" id="css-pourcent"></span>
+            </div>
+            <div class="bar-container" data-percent="85">
+              <span class="progressbar" id="progress-css"></span>
+            </div>
+          </li>
+          <li>
+            <div class="progressbar-title">
+              <h3>Bootstrap</h3>
+              <span class="percent" id="javascript-pourcent"></span>
+            </div>
+            <div class="bar-container" data-percent="80">
+              <span class="progressbar" id="progress-javascript"></span>
+            </div>
+          </li>
+          <li>
+            <div class="progressbar-title">
+              <h3>Python</h3>
+              <span class="percent" id="php-pourcent"></span>
+            </div>
+            <div class="bar-container" data-percent="65">
+              <span class="progressbar" id="progress-php"></span>
+            </div>
+          </li>
+          <li>
+            <div class="progressbar-title">
+              <h3>JavaScript</h3>
+              <span class="percent" id="angular-pourcent"></span>
+            </div>
+            <div class="bar-container" data-percent="70">
+              <span class="progressbar" id="progress-angular"></span>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="tools-knowledge-wrapper">
+        <div class="tools-wrapper">
+          <h2 class="title">Tools</h2>
+          <ul class="tools">
+            <li>
+              <i class="fa fa-check" aria-hidden="true"></i>
+              VSCode
+            </li>
+            <li>
+              <i class="fa fa-check" aria-hidden="true"></i>
+              IDLE
+            </li>
+            <li>
+              <i class="fa fa-check" aria-hidden="true"></i>
+              Sublime text
+            </li>
+          </ul>
+        </div>
+        <div class="knowledge-wrapper">
+          <h2 class="title">Knowledge</h2>
+          <ul class="knowledge">
+            <li>
+              <i class="fa fa-check" aria-hidden="true"></i>
+              GitHub
+            </li>
+            <li>
+              <i class="fa fa-check" aria-hidden="true"></i>
+              Responsive
+            </li>
+            <li>
+              <i class="fa fa-check" aria-hidden="true"></i>
+              Modeling
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+    <ul>
+    </ul>
+  </section>
+  <script
+    src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-8216c69d01441f36c0ea791ae2d4469f0f8ff5326f00ae2d00e4bb7d20e24edb.js">
+  </script>
+
+  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+  <script id="rendered-js">
+    $(document).ready(function () {
+      // Main variables
+      var $aboutTitle = $('.about-myself .content h2');
+      var $developmentWrapper = $('.development-wrapper');
+      var developmentIsVisible = false;
+      $('.hero .content .header').delay(500).animate({
+          'opacity': '1',
+          'top': '50%'
+        },
+        1000);
+
+
+      $(window).scroll(function () {
+
+        var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+        /* ##### ABOUT MYSELF SECTION #### */
+        if (bottom_of_window > $aboutTitle.offset().top + $aboutTitle.outerHeight()) {
+          $('.about-myself .content h2').addClass('aboutTitleVisible');
+        }
+        /* ##### EXPERIENCE SECTION #### */
+
+        // Check the location of each element hidden */
+        $('.experience .content .hidden').each(function (i) {
+
+          var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+
+          /* If the object is completely visible in the window, fadeIn it */
+          if (bottom_of_window > bottom_of_object) {
+
+            $(this).animate({
+                'opacity': '1',
+                'margin-left': '0'
+              },
+              600);
+          }
+        });
+
+        /*###### SKILLS SECTION ######*/
+
+        var middle_of_developmentWrapper = $developmentWrapper.offset().top + $developmentWrapper
+        .outerHeight() / 2;
+
+        if (bottom_of_window > middle_of_developmentWrapper && developmentIsVisible == false) {
+
+          $('.skills-bar-container li').each(function () {
+
+            var $barContainer = $(this).find('.bar-container');
+            var dataPercent = parseInt($barContainer.data('percent'));
+            var elem = $(this).find('.progressbar');
+            var percent = $(this).find('.percent');
+            var width = 0;
+
+            var id = setInterval(frame, 15);
+
+            function frame() {
+              if (width >= dataPercent) {
+                clearInterval(id);
+              } else {
+                width++;
+                elem.css("width", width + "%");
+                percent.html(width + " %");
+              }
+            }
+          });
+          developmentIsVisible = true;
+        }
+      }); // -- End window scroll --
+    });
+    //# sourceURL=pen.js
+  </script>
+
+
+  <script
+    src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-8216c69d01441f36c0ea791ae2d4469f0f8ff5326f00ae2d00e4bb7d20e24edb.js">
+  </script>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+  <script id="rendered-js">
+    $(document).ready(function () {
+      const $app = $('.app');
+      const $img = $('.app__img');
+      const $pageNav1 = $('.pages__item--1');
+      const $pageNav2 = $('.pages__item--2');
+      let animation = true;
+      let curSlide = 1;
+      let scrolledUp, nextSlide;
+
+      let pagination = function (slide, target) {
+        animation = true;
+        if (target === undefined) {
+          nextSlide = scrolledUp ? slide - 1 : slide + 1;
+        } else {
+          nextSlide = target;
+        }
+
+        $('.pages__item--' + nextSlide).addClass('page__item-active');
+        $('.pages__item--' + slide).removeClass('page__item-active');
+
+        $app.toggleClass('active');
+        setTimeout(function () {
+          animation = false;
+        }, 3000);
+      };
+
+      let navigateDown = function () {
+        if (curSlide > 1) return;
+        scrolledUp = false;
+        pagination(curSlide);
+        curSlide++;
+      };
+
+      let navigateUp = function () {
+        if (curSlide === 1) return;
+        scrolledUp = true;
+        pagination(curSlide);
+        curSlide--;
+      };
+
+      setTimeout(function () {
+        $app.addClass('initial');
+      }, 1500);
+
+      setTimeout(function () {
+        animation = false;
+      }, 4500);
+
+      $(document).on('mousewheel DOMMouseScroll', function (e) {
+        var delta = e.originalEvent.wheelDelta;
+        if (animation) return;
+        if (delta > 0 || e.originalEvent.detail < 0) {
+          navigateUp();
+        } else {
+          navigateDown();
+        }
+      });
+
+      $(document).on("click", ".pages__item:not(.page__item-active)", function () {
+        if (animation) return;
+        let target = +$(this).attr('data-target');
+        pagination(curSlide, target);
+        curSlide = target;
+      });
+    });
+    //# sourceURL=pen.js
+  </script>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js'></script>
+
+
+
+
+</body>
+
+</html>
